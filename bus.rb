@@ -2,7 +2,7 @@ require_relative "person"
 require_relative 'busstop'
 
 class Bus
-  attr_writer :passengers
+  # attr_writer :passengers
 
   def initialize (arg1, arg2)
     @route_number = arg1
@@ -26,7 +26,9 @@ class Bus
   end
 
   def empty_bus()
-    @passengers.delete[]
+    while @passengers.length > 0
+      @passangers.pop()
+    end
   end
 
 

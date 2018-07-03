@@ -12,8 +12,9 @@ class BusStop
   end
 
   def all_aboard(bus)
-    bus.passengers = @queue
-    @queue = []
+    while @queue.length > 0
+      bus.pick_up( @queue.pop() )
+    end
   end
 
 
